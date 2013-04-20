@@ -13,8 +13,3 @@ get '/' do
   erb :index
 end
 
-__END__
-@@index
-<% @tweets.each do |tweet| %>
-  <p><%= "@#{tweet.from_user}: #{tweet.text}" %></p>
-<% end %>
