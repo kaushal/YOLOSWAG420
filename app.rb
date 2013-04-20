@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'twitter'
+require 'slim'
 
 Twitter.configure do |config|
   config.consumer_key = ENV['CONKEY']
@@ -10,6 +11,6 @@ end
 
 get '/' do
   @tweets = Twitter.search('#yoloswag420', count: 100).results
-  erb :index
+  slim :index
 end
 
