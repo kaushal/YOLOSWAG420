@@ -18,9 +18,12 @@ head
 body
   .row
     .large-12.columns
-      ul(data-orbit='' data-options="bullets:false;")
+      ul(data-orbit='' data-options="bullets:false;" style="padding-top:50px;")
         - @tweets.each do |tweet|
-          li: h1 = "@#{tweet.from_user}: #{tweet.text}"
+          li
+            img(src=tweet.profile_image_url width=400 style="margin:auto;") 
+            p
+              h1.text-center = "@#{tweet.from_user}: #{tweet.text}"
 
   javascript:
     document.write('<script src=/js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
