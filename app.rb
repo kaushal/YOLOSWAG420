@@ -2,6 +2,8 @@ require 'sinatra'
 require 'twitter'
 require 'slim'
 
+Slim::Engine.set_default_options pretty: true, sort_attrs: false
+
 Twitter.configure do |config|
   config.consumer_key = ENV['CONKEY']
   config.consumer_secret = ENV['CONSEC']

@@ -11,7 +11,18 @@ head
   meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
   meta name="viewport" content="width=device-width, initial-scale=1.0"
   title= 'YOLOSWAG420' 
+  link href='css/normalize.css' rel='stylesheet' type='text/css'
+  link href='css/foundation.css' rel='stylesheet' type='text/css'
+  script src='js/vendor/custom.modernizr.js'
 
 body
-  - @tweets.each do |tweet|
-    p = "@#{tweet.from_user}: #{tweet.text}"
+  .row
+    ul(data-orbit='' data-options="bullets:false;")
+      - @tweets.each do |tweet|
+        li = "@#{tweet.from_user}: #{tweet.text}"
+
+  javascript:
+    document.write('<script src=/js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+  script src='js/foundation.min.js'
+  javascript:
+    $(document).foundation();
