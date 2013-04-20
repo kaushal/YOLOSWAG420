@@ -2631,7 +2631,8 @@ form.custom {
     top: 10px;
     left: 10px;
     font-size: 12px; 
-    color: whitesmoke;}
+    color: whitesmoke;
+    display: none;}
     .orbit-container .orbit-slide-number span {
       font-weight: 700; }
   .orbit-container .orbit-timer {
