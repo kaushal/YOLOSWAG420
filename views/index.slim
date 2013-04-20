@@ -16,7 +16,7 @@ head
   script src='js/vendor/custom.modernizr.js'
 
 body
-  .row
+  .row.rasta
     .large-12.columns
       ul(data-orbit='' data-options="bullets:false;" style="padding-top:50px;")
         - @tweets.each do |tweet|
@@ -31,7 +31,5 @@ body
   javascript:
     $(document).foundation();
     $(document).ready(function() {
-      $('.orbit-prev').hide();
-      $('.orbit-next').hide();
       $('.orbit-slide-number').hide();
     });
