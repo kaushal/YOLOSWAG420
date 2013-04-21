@@ -14,6 +14,10 @@ end
 @@tweets = Twitter.search('#yoloswag420', count: 100).results.shuffle
 
 get '/' do
+<<<<<<< HEAD
+=======
+  @tweets = Twitter.search('#yoloswag420', count: 30).results.shuffle
+>>>>>>> bed6cb78a00d471879fe28c4622db6a1b3e974e1
   slim :index
 end
 
