@@ -21,7 +21,7 @@ body
   .row.rasta
     .small-12.columns
       ul(data-orbit='' data-options="bullets:false;" style="padding-top:50px;")
-        - @tweets.each do |tweet|
+        - @@tweets.each do |tweet|
           li
             img(src=tweet.profile_image_url width=400 style="margin:auto;") 
             p
