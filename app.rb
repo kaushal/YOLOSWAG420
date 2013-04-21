@@ -12,7 +12,7 @@ Twitter.configure do |config|
 end
 
 get '/' do
-  @tweets = Twitter.search('#yoloswag420', count: 100).results.shuffle
+  @tweets = Twitter.search('#yoloswag420', count: 30).results.shuffle
   slim :index
 end
 
