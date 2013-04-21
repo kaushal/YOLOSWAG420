@@ -11,8 +11,13 @@ Twitter.configure do |config|
   config.oauth_token_secret = ENV['OAUTHSECRET']
 end
 
+@@tweets = Twitter.search('#yoloswag420', count: 100).results.shuffle
+
 get '/' do
-  @tweets = Twitter.search('#yoloswag420', count: 100).results.shuffle
   slim :index
 end
 
+get '/yoloswagupdate420' do
+  @@tweets = Twitter.search('#yoloswag420', count: 100).results.shuffle
+  "HI"
+end

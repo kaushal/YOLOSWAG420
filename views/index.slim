@@ -24,7 +24,7 @@ body
           li
             img(src=tweet.profile_image_url width=400 style="margin:auto;") 
             p
-              h1.text-center = "@#{tweet.from_user}: #{tweet.text}"
+              h1.text-center = "@@#{tweet.from_user}: #{tweet.text}"
 
   javascript:
     document.write('<script src=/js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
