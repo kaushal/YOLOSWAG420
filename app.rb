@@ -14,6 +14,7 @@ end
 $tweets = Twitter.search('#yoloswag420', count: 100).results.shuffle
 
 get '/' do
+  $tweets.shuffle!
   slim :index
 end
 
